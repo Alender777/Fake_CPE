@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh_tw">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Collegiate Programming Examination</title>
+</head>
+<body style="">
+    <div class="container-fluid">
+        <h1>大學程式能力檢定</h1>
+        <h2>Collegiate Programming Examination (CPE)</h2><br>
+        <form class="form-horizontal" action="." method="post">
+            <input type="hidden" name="isFirst" value="no">
+            <div class="control-group">
+                <label class="control-label">身分別：</label>
+                <label class="checkbox inline">
+                    <input type="radio" name="myLevel" id="student" checked=""> 一般考生
+                    <input type="radio" name="myLevel" id="admin"> 監考與管理人員
+                    <input type="radio" name="myLevel" id="fraud"> 詐騙集團
+                </label>
+            </div>
+            <div class="control-group">
+                <label class="control-label" id="myAccount">身分證字號：</label>
+                <div class="controls">
+                    <input type="text" id="inputID" name="id" value="">
+                    <span class="text-error">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">密碼：</label>
+                <div class="controls">
+                    <input type="password" name="pw">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">
+                    <span id="new_captcha">
+                        <img src="1682480151_9462.jpg" width="90" height="30" style="border:0;" alt=" ">
+                    </span>
+                </label>
+                <div class="controls">
+                    <input type="text" name="captcha" placeholder="請輸入左圖出現的文字">
+                    <span class="text-error">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <input class="btn btn-primary" type="submit" value="登入" onclick="validateForm()">
+                </div>
+            </div>
+        </form>
+        <hr>
+        <a id="forgetPW" class="btn" href="https://cpe.cse.nsysu.edu.tw/cpe/forget_password">忘記密碼</a>
+        <a id="addNewAccount" class="btn" href="https://cpe.cse.nsysu.edu.tw/cpe/new_account">申請新帳號</a>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
